@@ -1,0 +1,76 @@
+#flashcontent01 {
+	BORDER-RIGHT: #bebebe 1px solid; BORDER-TOP: #bebebe 1px; BACKGROUND: #ebebeb; PADDING-BOTTOM: 10px; BORDER-LEFT: #bebebe 1px solid; WIDTH: 800px; PADDING-TOP: 10px; BORDER-BOTTOM: #bebebe 1px solid
+}
+
+.idx_leftscroll {
+    margin-right: -710px;
+    position: fixed;
+    right: 50%;
+    top: -400px;
+    z-index: 1000;
+}
+.idx_leftscroll .scroll_floor_list {
+}
+.idx_leftscroll .floor_item {
+    height: 40px;
+    width: 100px;
+}
+.idx_leftscroll .floor_item a {
+    background: url("images/left_scroll.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 40px;
+    width: 100px;
+}
+.idx_leftscroll .floor_item_first {
+}
+.idx_leftscroll .floor_item_last {
+    height: 41px;
+}
+.idx_leftscroll .floor_item_last a {
+    height: 41px;
+}
+.idx_leftscroll .floor_item_totop {
+    height: 60px;
+    margin-top: 10px;
+    width: 60px;
+}
+.idx_leftscroll .floor_item_totop a {
+    height: 60px;
+    width: 60px;
+}
+.idx_leftscroll .floor_item .floor_1 {
+    background-position: 0 0;
+}
+.idx_leftscroll .floor_item .floor_2 {
+    background-position: 0 -40px;
+}
+.idx_leftscroll .floor_item .floor_3 {
+    background-position: 0 -80px;
+}
+.idx_leftscroll .floor_item .floor_4 {
+    background-position: 0 -120px;
+}
+.idx_leftscroll .floor_item .floor_5 {
+    background-position: 0 -280px;
+}
+.idx_leftscroll .floor_item .floor_totop {
+    background-position: 0 -331px;
+}
+.idx_leftscroll .floor_item.active .floor_1, .idx_leftscroll .floor_item .floor_1:hover {
+    background-position: -101px 1px;
+}
+.idx_leftscroll .floor_item.active .floor_2, .idx_leftscroll .floor_item .floor_2:hover {
+    background-position: -101px -39px;
+}
+.idx_leftscroll .floor_item.active .floor_3, .idx_leftscroll .floor_item .floor_3:hover {
+    background-position: -101px -80px;
+}
+.idx_leftscroll .floor_item.active .floor_4, .idx_leftscroll .floor_item .floor_4:hover {
+    background-position: -101px -120px;
+}
+.idx_leftscroll .floor_item.active .floor_5, .idx_leftscroll .floor_item .floor_5:hover {
+    background-position: -101px -281px;
+}
+.idx_leftscroll .floor_item.active .floor_totop, .idx_leftscroll .floor_item .floor_totop:hover {
+    background-position: -101px -331px;
+}

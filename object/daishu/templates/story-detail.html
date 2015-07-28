@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="banner1" style="background:url('/static/images/cgal.jpg') no-repeat center top"></div>
+{% include 'include/graybox.html' %}
+<div class="w1000 ma20">
+	<div class="main_til"><span class="main_til_con"><em class="f_30">成功</em>案例<span class="english_til">successful case</span></span><div class="main_til_site">当前位置：<a href="{% url 'index' %}">首页</a><em> &gt; </em>成功案例</div><div class="main_til_bg"></div></div>
+    <div class="case_detailed fn-clear">
+    	<div class="case_detailed_l">
+    	<div class="case_diagram">
+        	<img src=" /temp/{{story_detail.img}} " />
+        </div>
+        </div>
+        <div class="case_detailed_r">
+        	<div class="case_detailed_til"><b> {{story_detail.title}} </b>-----{{story_detail.description}}</div>
+            <div class="case_detailed_info fn-clear">
+            	<div class="fn-left"><div class="case_logo"><img src="/temp/{{story_detail.logo}}" /></div></div>
+                <p class="case_info_text">
+                	{{story_detail.content}}
+                </p>
+            </div>
+            <p><a href=" {{story_detail.url}} " target="_blank">story_detail.url</a>&nbsp;&nbsp;上线时间：{{story_detail.onlinetime|date:'Y-m-d'}} </p>
+         <!--    <div class="case_info">
+                <span class="mr15"><em class="icos ico_look"></em><em>23</em></span>
+                <span><em class="icos ico_tool"></em><em>iLoan</em></span>
+            </div> -->
+         	<!-- <div class="fn-clear mt15">
+         		<a class="case_btn btn_case_previous" href='storyDetail?id=576' ><em class="icos"></em>上一案例</a>
+                <a class="case_btn" href="story">案例列表</a>
+                <a class="case_btn btn_case_next" href='storyDetail?id=578' >下一案例<em class="icos"></em></a>
+            </div> -->
+            <div class="mt20">
+            	<p>想立即拥有属于你自己的p2p网站吗？</p>
+                <a class="develop_btn" href='http://wpa.qq.com/msgrd?V=3&uin=893805791&Site=QQ客服&Menu=yes'></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="case_imgs">
+    	<img src="/temp/{{story_detail.img}}" />
+    </div>
+</div>
+
+
+
+
+
+{{story_detail.title}}
+
+
+
+{% endblock %}

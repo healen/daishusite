@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+<div class="banner1"></div>
+{% include 'include/graybox.html' %}
+<div class="w1000 ma20">
+		<div class="main_til"><span class="main_til_con"><em class="f_30">成功</em>案例<span class="english_til">successful case</span></span><div class="main_til_site">当前位置：<a href="/">首页</a><em> &gt; </em>成功案例</div><div class="main_til_bg"></div></div>
+	    <div class="con_case_box fn-clear">
+	    	{% for story in story_list %}
+
+	    	<div class="case_item">
+	            <div class="case_img"><img src="/temp/{{story.img}}" /></div>
+	            <div class="case_text">
+	                <h3>{{story.title}}</h3>
+	                <p>{{story.content|slice:"30"}}...</p>
+	            </div>
+	             <div class="case_btns">
+	            	<a class="btn btn_case_pink" href="{{story.url}}" target="_blank">登录网站<em class="icos"></em></a>
+	              	<a class="btn btn_case_lblue" href="{% url 'storyDetail' story.id %}" target="_blank">查看详情<em class="icos"></em></a>
+	            </div>
+	        </div>
+			{% empty %}
+	    	暂无数据
+	    	{% endfor %}
+		</div>
+</div>
+{% endblock %}

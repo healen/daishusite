@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="banner1"></div>
+{% include 'include/graybox.html' %}
+<div class="w1000 ma0 pb10">
+	<div class="pt40 pb30 fn-clear">
+        <ul class="side_menu">
+            <li><a onclick="setTypeId(2)" class="active">网站公告</a></li>
+            <li><a onclick="setTypeId(3)" >运营知识</a></li>
+            <li><a onclick="setTypeId(1)" >借贷新闻</a></li>
+        </ul>
+        <div class="singlepege">
+        	<h2>{{new_detail.title}}</h2>
+            <div class="singlepege_tiltwo"><span>作者：<em>{{new_detail.author}}</em></span><span>发布时间：<em> {{new_detail.pub_date|date:'Y-m-d'}} </em></span></div>
+            <div class="tc"></div>
+            <p>
+            	{{new_detail.content}}
+            </p>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

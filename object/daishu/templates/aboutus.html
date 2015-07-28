@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+
+{% block script %}
+<script type="text/javascript">
+function dispDiv(id){
+	for(var i=1;i<=2;i++){
+		if(id==i){
+			document.getElementById("div_disp_"+i).style.display="block";
+			document.getElementById("a_menu_"+i).setAttribute("class","active");
+		}else{
+			document.getElementById("div_disp_"+i).style.display="none";
+			document.getElementById("a_menu_"+i).removeAttribute("class");
+		}
+	}
+}
+</script>
+
+{% endblock %}
+
+{% block content %}
+<div class="banner1"></div>
+{% include 'include/graybox.html' %}
+
+<div class="w1000 ma0 pt40 pb40 fn-clear">
+    <ul class="side_menu">
+        <li><a href="javascript:void(0)" tabindex="1" onclick="dispDiv(1)" id="a_menu_1" class="active">关于我们</a></li>
+        <li><a href="javascript:void(0)" tabindex="2" onclick="dispDiv(2)" id="a_menu_2">联系我们</a></li>
+    </ul>
+
+    <div id="div_disp_1" class="singlepege">
+        <h2>关于我们</h2>
+        <div class="sj jj">
+           <!--  <p>贷鼠网创立于2014年，是国内研发P2P网贷系统的先行者。做专业的p2p借贷系统，并且提供p2p网贷平台的全方位技术支持和网站运营策划，拥有一支高素质，高学历的技术管理团队，都是来自IT前沿，拥有高超的技术和丰富的制作经验。</p>
+            <p>p2p网贷系统开发是我们的专业核心服务，且拥有多项与互联网相关的产品和服务，可以满足不同类型企业的要求，此外，目前公司已与多家企业有着紧密的合作关系。</p>
+            <p>贷鼠网由互联网金融家，技术研发专家创办。具有端到端的“软件+服务”的综合能力，致力于构建强大的互联网金融生态圈。一直以设计品牌影响力，诚实守信，争取互利互赢的文化理念，领先的网络营销能力为广大客户服务，且能为客户带来便利并得到客户的一致认可。</p>        -->
+
+            {{basic_info.content}}
+        </div>
+    </div>
+    <div id="div_disp_2" style="display:none" class="singlepege">
+
+    	<h2>联系我们</h2>
+        <div class="sj jj">
+
+                <p>公司名称：{{basic_info.company_name}}</p>
+                <p>公司地址：{{basic_info.address}}</p>
+                <p>公司电话：{{basic_info.tel}}</p>
+          
+        </div>
+    </div>
+
+    <div id="div_disp_3" style="display:none" class="singlepege">
+    	
+    </div>
+
+</div>
+
+
+{% endblock %}

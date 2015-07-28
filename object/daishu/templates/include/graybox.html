@@ -1,0 +1,50 @@
+<div class="index_grayBox">
+    <div class="w1000 ma0 index_grayCon">
+        <div class="index_announce">
+        <a href="news?typeid=2" class="index_announce_til">最新公告</a>
+            <div class="index_announce_inc">
+                <div class="announce_info">
+                    <ul>
+                   
+					{% for new in new_topic %}
+
+					<li><span class="datetime"> {{new.pub_date|date:'Y-m-d'}} </span><a href="{% url 'newsDetail' new.id %}">{{new.title}}</a></li>	
+					{% empty %}
+
+					<li>暂无数据</li>
+
+					{% endfor %}
+
+                    </ul>
+                </div>
+                <div class="announce_btn">
+                    <a href="javascript:;" id="announce_btn_up" class="icos btn_up"></a>
+                    <a href="javascript:;" id="announce_btn_down" class="icos btn_down"></a>
+                </div>
+            </div>
+            <div class="icos index_announce_end"></div>
+        </div>
+        <div class="index_contact">
+            <a target="_blank" href="http://crm2.qq.com/page/portalpage/wpa.php?uin={{basic_info.qq}}&amp;f=1&amp;ty=1&amp;aty=0&amp;a=&amp;from=6"><em class="icos ico_qq"></em>
+                <div class="contact_text">
+                <p class="con_text"><span>QQ：</span><em>{{basic_info.qq}}</em></p>
+                <p class="con_arrow"><em class="icos ico_con_arrow"></em></p>
+                </div>
+            </a>
+            <a href="#"><em class="icos ico_phone"></em>
+                <div class="contact_text">
+                <p class="con_text"><span>咨询热线：</span><em>{{basic_info.tel}}</em></p>
+                <p class="con_arrow"><em class="icos ico_con_arrow"></em></p>
+                </div>
+            </a>
+            <a href="server@daishu360.com"><em class="icos ico_msg"></em>
+                <div class="contact_text">
+                <p class="con_text"><span>邮箱地址：</span><em>{{basic_info.email}}</em></p>
+                <p class="con_arrow"><em class="icos ico_con_arrow"></em></p>
+                </div>
+            </a>
+        </div>
+        <div class="index_develop_process"></div>
+        <div class="icos gray_arrow"></div>
+    </div>
+</div>

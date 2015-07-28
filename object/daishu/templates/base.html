@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>贷鼠网-{% block title %} {{page_init.title}} {% endblock %}</title>
+	<meta name="keywords"    content=" {% block keywords %} {{page_init.keywords}} {% endblock %} " />
+	<meta name="description" content=" {% block description %} {{page_init.description}} {% endblock %}" />
+
+	<link href="/static/css/base.css" type="text/css" rel="stylesheet">
+	<link href="/static/css/content.css" type="text/css" rel="stylesheet">
+	{% block style %}{% endblock %}
+	<link rel="shortcut icon" href="/static/images/damotouicon.ico" type="image/x-icon" />
+
+	<script src="/static/js/jquery-1.7.1.min.js"></script>
+	<script src="/static/js/jquery-ui-1.8.18.min.js"></script>
+	<script src="/static/js/jquery.slides.js"></script>
+	<script src="/static/js/jq_scroll.js"></script>
+	<script src="/static/js/myjs.js"></script>
+	{% block script %}{% endblock %}
+</head>
+<body>
+	<div class="wrapper">
+		{% include 'include/head.html' %}
+
+		{% block content %} 主体内容 {% endblock %}
+
+		{% include 'include/foot.html' %}	
+	</div>
+</body>
+</html>

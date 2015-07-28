@@ -1,0 +1,26 @@
+<div class="index_grayBox tc index_box">
+	<div class="index_til"><em class="icos ico_service"></em></div>
+    <img src="/static/images/index_service.png" class="service_pic" />
+</div>
+<div class="footer fn-clear">
+  	<div class="w1000 ma0 fn-clear">
+  		<p class="mb10">
+  			<a href="{% url 'index' %}">首页</a>
+  			<em>|</em>
+  			<a href="{% url 'product' %}">产品介绍</a>
+  			<em>|</em>
+  			<a href="{% url 'story' %}">成功案例</a>
+  			<em>|</em>
+  			<a href="{% url 'service' %}">服务项目</a>
+  			<em>|</em>
+  			<a href="{% url 'program' %}">方案流程</a>
+  			<em>|</em>
+  			<a href="{% url 'news' %}">新闻动态</a>
+  			<em>|</em>
+  			<a href="{% url 'aboutus' %}">关于我们</a>
+  		</p>
+        <p>公司地址：{{basic_info.address}}</p>
+        <p>{{basic_info.copyright}} </p>
+       
+	</div>
+</div>

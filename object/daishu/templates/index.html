@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="banner">
+    <div class="slidesjs-slide" style="background:url('/static/images/example/20150104172506.jpg') no-repeat center top"></div>
+    <div class="slidesjs-slide" style="background:url('/static/images/example/20141212191552.jpg') no-repeat center top"></div>
+    <div class="slidesjs-slide" style="background:url('/static/images/example/20141212191354.jpg') no-repeat center top"></div>
+</div>
+
+{% include 'include/graybox.html' %}
+
+<div class="w1000 ma0 pt30 pb30">
+    <div class="fn-clear">
+        <div class="index_slogan"><em class="f_24">远瞻</em>积淀专业  <em class="f_24">专业</em>打造安全  <em class="f_24">安全</em>赢得市场</div>
+        <div class="index_consult">您身边的P2P网贷系统专家<br />7×24小时咨询热线：<em class="f_24">{{basic_info.tel}}</em></div>
+    </div>
+    <div class="index_intr">
+        <p>{{basic_info.content|slice:'100'}}...</p>
+       
+    </div>
+</div>
+<div class="index_iloan">
+	<a href="story" class="iloan_more">+MORE</a>
+    <div class="iloan_advantage">
+        <div class="iloan_adv_inc">
+            <div class="fn-left w70">系统优势:</div>
+           
+            <div class="iloan_adv_text">
+                <ul>
+                	{% for advantage in system_advantage %}
+                    <li><a href="{% url 'newsDetail' advantage.id %}" target="_blank"> {{advantage.title}}  </a></li>
+                    {% empty %}
+                    <li>暂无数据</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="iloan_adv_btn">
+            <a href="javascript:;" id="iloan_btn_up" class="icos btn_up"></a>
+            <a href="javascript:;" id="iloan_btn_down" class="icos btn_down"></a>
+        </div>
+    </div>
+    <div class="iloan_scroll">
+        <div class="slidesjs-slide">
+        	{% for story in story_list %}
+        	<div class="scroll_item">
+                <div class="iloan_logo_box">
+                    <div class="iloan_logo_img"><a href="{% url 'storyDetail' story.id %}" target="_blank"><img width="63" height="63" src="/temp/{{story.logo}}" /></a></div>
+                </div>
+                <p class="tc">{{story.title|slice:"8"}}</p>
+            </div>
+        	{% empty %}
+        	<div class="scroll_item">
+                <p class="tc">暂无数据</p>
+            </div>
+        	{% endfor %}
+        </div>
+        <div class="slidesjs-slide">
+        	{% for story in story_list %}
+        	<div class="scroll_item">
+                <div class="iloan_logo_box">
+                    <div class="iloan_logo_img"><a href="{% url 'storyDetail' story.id %}" target="_blank"><img width="63" height="63" src="/temp/{{story.logo}}" /></a></div>
+                </div>
+                <p class="tc">{{story.title|slice:"8"}}</p>
+            </div>
+        	{% empty %}
+        	<div class="scroll_item">
+                <p class="tc">暂无数据</p>
+            </div>
+        	{% endfor %}
+	    </div> 
+    </div>
+</div>
+
+
+
+
+<div class="index_box">
+
+	<div class="index_til">
+        <div class="icos ico_index_til"><div class="index_til_text"><em>成功<br>案例</em></div></div>
+    </div>
+	<div class="w1000 ma0">
+        <div class="index_case_box">
+        	<a class="case_more" href="story">+MORE</a>
+            <div class="slidesjs-slide fn-clear">
+				{% for story in story_list %}
+				<div class="case_item">
+                	<!-- <div class="case_info">
+                    	<p><em class="icos ico_look"></em><em>10</em></p>
+                    </div> -->
+                	<div class="case_img"><img src="/temp/{{story.img}}" /></div>
+                    <div class="case_text">
+                        <h3> {{story.title}} </h3>
+                        <p> {{story.content|slice:'30'}}... </p>
+                        <div class="case_footer">
+                            <a class="btn btn_case_red" href="{{story.url}}" target="_blank">登录网站<em class="icos"></em></a>
+                            <a class="btn btn_case_dblue" href="{% url 'storyDetail' story.id %}">查看详情<em class="icos"></em></a>
+                        </div>
+                    </div>
+                </div>
+				{% empty %}
+				暂无数据
+				{% endfor %}
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+<div class="index_box">
+	<div class="index_til"><div class="icos ico_index_til"><div class="index_til_text"><em class="text">微信</em></div></div></div>
+    <div class="w1000 ma0">
+    	<div class="tc"><img src="/static/images/webapp_bg.png" /></div>
+    </div>
+</div>
+
+
+
+	<!-- {% for story in story_list %}
+	<p>{{story.id}}</p>
+	<p>{{story.title}}</p>
+	<p>{{story.desccription}}</p>
+	<p>{{story.content}}</p>
+	<p>{{story.onlinetime}}</p>
+	<p>{{story.url}}</p>
+	<p>{{story.img}}</p>
+	<p>{{story.logo}}</p>
+	<img src="/temp/{{story.img}}" alt="">
+	{% endfor %} -->
+
+{% endblock %}

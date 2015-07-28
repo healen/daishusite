@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+
+<div class="banner1"></div>
+
+
+
+{% include 'include/graybox.html' %}
+
+
+<div class="w1000 ma0 pb10">
+	<div class="pt40 pb30 fn-clear">
+        <ul class="side_menu">
+            <li><a onclick="setTypeId(2)" class="active">网站公告</a></li>
+            <li><a onclick="setTypeId(3)" >运营知识</a></li>
+            <li><a onclick="setTypeId(1)" >借贷新闻</a></li>
+        </ul>
+        <div class="singlepege">
+            <div class="newslist fn-clear">
+                <ul class="l30">
+					{% for new in new_list %}
+
+                    <li><span class="datetime"> {{new.pub_date|date:'Y-m-d'}} </span><img src="/static/images/resultset_next2.png"><a href="{% url 'newsDetail' new.id %}" title=" {{new.title}} " target="_blank">{{new.title}}</a>
+                        <p>{{new.content|slice:"30"}}...</p>
+                    </li>
+
+                    {% endfor %}
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--  <div class="flickr pb30">
+		<div class="before">共<em>270</em>条  10条/页  |  第<em>1</em>/<em>27</em>页</div>
+		<div class="after">
+		<em class="disabled">首页</em>
+		<em class="disabled">上一页</em>
+		
+				<em class="current">1</em>
+				<a href="#" class="pageindex" currentNum="2">2</a>
+				<a href="#" class="pageindex" currentNum="3">3</a>
+				<a href="#" class="pageindex" currentNum="4">4</a>
+				<a href="#" class="pageindex" currentNum="5">5</a>
+				<em>...</em>
+						
+		<a href="#" class="pageindex" currentNum="2">下一页</a>
+		<a href="#" class="page" currentNum="27">尾页</a>
+		</div>
+
+    </div> -->
+</div>
+
+{% endblock %}
