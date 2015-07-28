@@ -48,9 +48,11 @@ class BasicInfo(models.Model):
 	website_url=models.URLField(u'网址')
 	email=models.EmailField(u'邮箱')
 	website_name=models.CharField(u'平台名称',max_length=30)
-	address=models.TextField(u'公司地址')
-	copyright=models.TextField(u'版权信息')
+	address=models.CharField(u'公司地址',max_length=50)
+	copyright=models.CharField(u'版权信息',max_length=100)
 	content=models.TextField(u'公司介绍')
+	def __unicode__(self):
+		return u'编辑基本信息'
 	class Meta:
 		verbose_name=u'基本信息'
 		verbose_name_plural=u'基本信息'

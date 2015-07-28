@@ -25,7 +25,7 @@
 					{% for new in new_list %}
 
                     <li><span class="datetime"> {{new.pub_date|date:'Y-m-d'}} </span><img src="/static/images/resultset_next2.png"><a href="{% url 'newsDetail' new.id %}" title=" {{new.title}} " target="_blank">{{new.title}}</a>
-                        <p>{{new.content|slice:"30"}}...</p>
+                        <p>{{new.content|safe|striptags|slice:'50'}}...</p>
                     </li>
 
                     {% endfor %}

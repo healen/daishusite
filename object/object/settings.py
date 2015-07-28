@@ -84,5 +84,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(os.path.dirname(__file__), '..', 'static').replace('\\','/')
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'')
-MEDIA_URL = ''
+TEMP_ROOT = os.path.join(BASE_DIR,'')
+TEMP_URL = ''

@@ -8,7 +8,8 @@ urlpatterns = patterns('',
     # url(r'^$', 'object.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^temp/(?P<path>.*)$','django.views.static.serve',{'document_root':settings.MEDIA_ROOT},name='temp'),
+    url(r'^temp/(?P<path>.*)$','django.views.static.serve',{'document_root':settings.TEMP_ROOT},name='temp'),
+    (r'^media/(?P<path>.*)$', 'django.views.static.serve',{'document_root': 'media'}),
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$','daishu.views.index',name='index'),

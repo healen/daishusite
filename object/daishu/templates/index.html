@@ -17,8 +17,7 @@
         <div class="index_consult">您身边的P2P网贷系统专家<br />7×24小时咨询热线：<em class="f_24">{{basic_info.tel}}</em></div>
     </div>
     <div class="index_intr">
-        <p>{{basic_info.content|slice:'100'}}...</p>
-       
+        <p>{{basic_info.content|safe|striptags|slice:'100'}}...</p>
     </div>
 </div>
 <div class="index_iloan">

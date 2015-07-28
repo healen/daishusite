@@ -16,7 +16,7 @@
             <div class="singlepege_tiltwo"><span>作者：<em>{{new_detail.author}}</em></span><span>发布时间：<em> {{new_detail.pub_date|date:'Y-m-d'}} </em></span></div>
             <div class="tc"></div>
             <p>
-            	{{new_detail.content}}
+            	{{new_detail.content|safe}}
             </p>
         </div>
     </div>
