@@ -1,6 +1,6 @@
 tinyMCE.init({  
         // General options
-        // language : "zh_cn",
+        // language : "zh_CN",
         mode : "textareas",  
         theme : "advanced",  
 
@@ -19,10 +19,10 @@ tinyMCE.init({
         // Example content CSS (should be your site CSS)  
         //content_css : "/css/style.css",  
    
-        template_external_list_url : "lists/template_list.js",  
-        external_link_list_url : "lists/link_list.js",  
-        external_image_list_url : "lists/image_list.js",  
-        media_external_list_url : "lists/media_list.js",  
+        // template_external_list_url : "/lists/template_list.js",  
+        // external_link_list_url : "/lists/link_list.js",  
+        // external_image_list_url : "/lists/image_list.js",  
+        // media_external_list_url : "/lists/media_list.js",  
    
         // Style formats  
         style_formats : [  

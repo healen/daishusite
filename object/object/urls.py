@@ -9,16 +9,26 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^temp/(?P<path>.*)$','django.views.static.serve',{'document_root':settings.TEMP_ROOT},name='temp'),
+    
     (r'^media/(?P<path>.*)$', 'django.views.static.serve',{'document_root': 'media'}),
 
     url(r'^admin/', include(admin.site.urls)),
+   
     url(r'^$','daishu.views.index',name='index'),
+    
     url(r'^product/$','daishu.views.product',name='product'),
+    
     url(r'^story/$','daishu.views.story',name='story'),
+    
     url(r'^story/(\d*)/$','daishu.views.storyDetail',name='storyDetail'),
+    
     url(r'^service/$','daishu.views.service',name='service'),
+    
     url(r'^program/$','daishu.views.program',name='program'),
+    
     url(r'^news/$','daishu.views.news',name='news'),
+    
     url(r'^news/(\d*)/$','daishu.views.newsDetail',name='newsDetail'),
+    
     url(r'^aboutus/$','daishu.views.aboutus',name='aboutus'),
 )

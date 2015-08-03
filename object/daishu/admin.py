@@ -8,7 +8,8 @@ class NewsAdmin(admin.ModelAdmin):
     list_display = ('title','pub_date')
     class Media:
         js=(
-            '/media/js/tiny_mce/tiny_mce.js',  
+            '/media/js/tiny_mce/tiny_mce.js', 
+            '/media/js/tiny_mce/langs/zh_CN.js',  
             '/media/js/textareas.js',  
         )
 class StoryAdmin(admin.ModelAdmin):
@@ -16,8 +17,10 @@ class StoryAdmin(admin.ModelAdmin):
 class BasicInfoAdmin(admin.ModelAdmin):
     class Media:
         js=(
-            '/media/js/tiny_mce/tiny_mce.js',  
-            '/media/js/textareas.js',  
+            '/media/js/tiny_mce/tiny_mce.js', 
+            '/media/js/tiny_mce/langs/zh_CN.js',  
+            '/media/js/textareas.js',
+           
         )
 
 

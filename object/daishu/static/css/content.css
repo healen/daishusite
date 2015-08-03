@@ -154,7 +154,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endCo
 .index_case_box,.con_case_box{width:1023px;}
 .index_case_box{padding-top:28px;position:relative;}
 .index_case_box .slidesjs-control{overflow:hidden;}
-.index_case_box .slidesjs-slide{padding:20px 0;}
+.index_case_box .slidesjs-slide{padding:20px 0; padding-top:40px;}
 .index_case_box .case_img{border:1px solid #d7d7d7;height:160px;}
 .index_case_box .slidesjs-pagination {top:0;left:0;}
 .index_case_box .slidesjs-pagination li{float:left;margin-right:15px;}
@@ -204,7 +204,7 @@ a.case_btn{display:inline-block;background:#425e6d;border-radius:6px;width:102px
 .side_menu li a:hover , .side_menu li a.active{ background:#fff; color:#4f7a8d;}
 
 /*** 单页 ***/
-.singlepege{ width:805px; font-size:14px; float:right; line-height:26px; background:#fff; color:#666;}
+.singlepege{ /*width:805px;*/ font-size:14px;/* float:right;*/ line-height:26px; background:#fff; color:#666;}
 .singlepege h2{font-size:28px;text-align:center;margin-bottom:20px;}
 .singlepege h4{font-size:16px;font-weight:bold;line-height:35px;}
 .singlepege_tiltwo{text-align:center;overflow:auto;padding-bottom:25px;}
